@@ -7,13 +7,7 @@
 <br/><br/>
 <script>
     let a = 52;
-    var inBody = function(){            // Создаём анонимную функцию. Помещаем её в переменную "inBody"
-       xhr.onload = function(){        // Используем обработчик событий onload, чтобы поймать ответ сервера XMLHttpRequest
-          document.body.innerHTML = a  // Содержимое ответа, помещаем внутрь элемент "body" 
-       }
-       xhr.send()  // Инициирует запрос. Посылаем запрос на сервер.
-    }
-    inBody()    // Запускаем выполнение функции получения содержимого файла
+    document.body.innerHTML = a;
 </script>
 <br/><br/>
 <b>Просто пример жирного текста</b>
