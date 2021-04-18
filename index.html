@@ -8,12 +8,12 @@
         <center>
             <a id="a1"></a>
         </center>
+    <script language="VBScript">
+        Dim fso, f1
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        Set f1 = fso.CreateTextFile("testfile.txt", True)
+    </script> 
     <script>
-        const http = require('http') // Чтобы использовать HTTP-интерфейсы в Node.js
-        const fs = require('fs') // Для взаимодействия с файловой системой
-        const path = require('path') // Для работы с путями файлов и каталогов
-        const url = require('url') // Для разрешения и разбора URL 
-        
         function readTextFile(file)
         {
             var rawFile = new XMLHttpRequest();
