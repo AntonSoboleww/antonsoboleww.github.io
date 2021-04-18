@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Страница 2</title>
+</head>
+<body>
+<center><h1>Шаблон сайта. Страница 2</h1></center>
+<a href="index.html">Перейти на главную страницу</a>
+<br/>
+<a href="page2.html">1</a>
+<a href="page3.html">2</a>
+<a href="page4.html">3</a>
+<br/><br/>
+    <canvas id='example'>Обновите браузер</canvas>
+    <script>
+      var example = document.getElementById("example"),
+        ctx = example.getContext('2d'),
+        pic       = new Image(); 
+        pic.src    = 'image.png';
+        pic.onload = function() {
+        ctx.drawImage(pic, 0, 0, 150, 150);
+      }
+    </script>
+<br/><br/>
+<font style="color:gray">Эта страница с серым текстом и подгрузкой готовой картинки</font>
+</body>
+</html>
