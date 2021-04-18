@@ -7,11 +7,11 @@
 <br/><br/>
 <script>
     function getRandomInt(max) {
-      return Math.floor(Math.random() * max);
+      document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * max);
     }
 </script>
 <br/><br/>
-<font style="color:green">Хочешь аНиМе??? <script>getRandomInt(15)</script></font>
+<a style="color:green" id="myNumber" onload="getRandomInt(50);"></a>
 <br/><br/>
 <b>Просто пример жирного текста</b>
 </body>
