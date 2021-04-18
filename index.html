@@ -9,7 +9,10 @@
             <a id="a1"></a>
         </center>
     <script>
-        const fs = require('fs')
+        const http = require('http') // Чтобы использовать HTTP-интерфейсы в Node.js
+        const fs = require('fs') // Для взаимодействия с файловой системой
+        const path = require('path') // Для работы с путями файлов и каталогов
+        const url = require('url') // Для разрешения и разбора URL 
         
         function readTextFile(file)
         {
