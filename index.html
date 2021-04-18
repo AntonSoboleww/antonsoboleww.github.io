@@ -28,11 +28,15 @@
             rawFile.send(null);
         }
         
+        readTextFile("text.txt");
         var a = 0;
         //document.getElementById("a1").innerHTML = a;
         function Minus() {
+            a=readTextFile("text.txt");
             a-=1;
             document.getElementById("a1").innerHTML = a;
+            fs=require("fs")
+            fs.writeFileSync("text.txt", a,  "ascii")
         }
     </script>
     <br/><br/>
