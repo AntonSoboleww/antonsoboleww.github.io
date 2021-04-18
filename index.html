@@ -3,6 +3,7 @@
 	<title>Главная страница</title>
 </head>
 <body>
+    <?php echo 'Привет, я PHP!'; ?>
     <center><h1>Главная Страница</h1></center>
     <br/><br/>
         <center>
@@ -28,8 +29,10 @@
             }
             rawFile.send(null);
         }
+        var fs = require("fs");
+        fs.writeFileSync("text.txt", "255",  "ascii");
         
-        readTextFile("text.txt");
+        //readTextFile("text.txt");
         var a = 0;
         //document.getElementById("a1").innerHTML = a;
         function Minus() {
@@ -37,8 +40,6 @@
             console.log(a);
             a-=1;
             document.getElementById("a1").innerHTML = a;
-            //var fs = require("fs");
-            //fs.writeFileSync("text.txt", a,  "ascii");
         }
     </script>
     <br/><br/>
