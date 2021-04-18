@@ -20,7 +20,6 @@
                     if(rawFile.status === 200 || rawFile.status == 0)
                     {
                         var allText = rawFile.responseText;
-                        alert(allText);
                         return allText;
                     }
                 }
@@ -28,8 +27,7 @@
             rawFile.send(null);
         }
         
-        var a = readTextFile("text.txt");
-        document.getElementById("a1").innerHTML = a;
+        document.getElementById("a1").innerHTML = readTextFile("text.txt");
         function Minus() {
             a-=1;
             document.getElementById("a1").innerHTML = a;
