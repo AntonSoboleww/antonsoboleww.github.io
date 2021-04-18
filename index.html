@@ -9,10 +9,10 @@
             <a id="a1"></a>
         </center>
     <script language="JavaScript">
-        Dim fso, f1;
-        Set fso = CreateObject("Scripting.FileSystemObject");
-        Set f1 = fso.CreateTextFile("testfile.txt", True);
-    </script> 
+        var fso, f1;
+        fso = new ActiveXObject("Scripting.FileSystemObject");
+        f1 = fso.CreateTextFile("testfile.txt", true);
+    </script>
     <script>
         function readTextFile(file)
         {
