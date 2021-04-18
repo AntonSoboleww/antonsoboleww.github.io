@@ -20,7 +20,7 @@
                     if(rawFile.status === 200 || rawFile.status == 0)
                     {
                         var allText = rawFile.responseText;
-                        console.log(rawFile.responseText);
+                        alert(allText-1);
                         document.getElementById("a1").innerHTML = allText;
                         return allText;
                     }
