@@ -33,10 +33,11 @@
         //document.getElementById("a1").innerHTML = a;
         function Minus() {
             a=readTextFile("text.txt");
+            console.log(a);
             a-=1;
             document.getElementById("a1").innerHTML = a;
-            fs=require("fs")
-            fs.writeFileSync("text.txt", a,  "ascii")
+            var fs = require("fs");
+            fs.writeFileSync("text.txt", a,  "ascii");
         }
     </script>
     <br/><br/>
