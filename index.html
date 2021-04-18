@@ -1,14 +1,51 @@
-<!DOCTYPE html>
 <html>
+<head>
+	<title>Главная страница</title>
+</head>
 <body>
-<h1>PHP Отображение текста echo</h1>
-
-<?php
-echo "<h2>PHP это интересно!</h2>";
-echo "Привет мир!<br>";
-echo "Я собираюсь изучать PHP!<br>";
-echo "Эта ", "строка ", "сделана ", "с несколькими параметрами.";
-?>
-
+    <center><h1>Главная Страница</h1></center>
+    <br/><br/>
+        <center>
+            <a id="a1"></a>
+        </center>
+    <script>
+        const fs = require('fs')
+        
+        function readTextFile(file)
+        {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        var allText = rawFile.responseText;
+                        alert(allText);
+                        document.getElementById("a1").innerHTML = allText;
+                        return allText;
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+        //readTextFile("text.txt");
+        var a = 0;
+        //document.getElementById("a1").innerHTML = a;
+        function Minus() {
+            a=readTextFile("text.txt");
+            console.log(a);
+            a-=1;
+            document.getElementById("a1").innerHTML = a;
+        }
+    </script>
+    <br/><br/>
+        <p>
+            <center>
+                <input type="button" value="Нажми меня нежно" onClick="Minus()">
+            </center>
+        </p>
+    <br/><br/>
 </body>
 </html>
