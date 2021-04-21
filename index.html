@@ -7,46 +7,17 @@
 			body { margin: 0; }
 		</style>
 		<script src="js/three.js"></script>
+		<script src="js/game.js"></script>
 	</head>
 	<body>
 		<script>
-			
-            var p = 0;
+            game.init();
             
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
+            game.addCube({
+                'position' : game.v(0,0,0)
+            });
             
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({color: '#6495ED'});
-            const cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
-
-            camera.position.z = 5;
-            
-            function animate() {
-                requestAnimationFrame( animate );
-                renderer.render( scene, camera );
-                
-                cube.rotation.y += 0.01;
-                cube.rotation.x += 0.01;
-                
-                //if (camera.position.x > -2.8)
-                //{
-                //    camera.position.x -= 0.01;
-                //{
-                //else
-                //{
-                //    camera.position.x += 0.01;
-                //}
-                
-                //console.log(camera.position.x);
-            }
-            animate();
-            
+            game.camera.position.z = 5
 		</script>
 	</body>
 </html>
