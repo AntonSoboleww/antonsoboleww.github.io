@@ -9,7 +9,7 @@ const game = new function() {
     
     const addCube = this.addCube = (conf) => {
         const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        const material = new THREE.MeshBasicMaterial( { color: '#6495ED' } );
         let cube = new THREE.Mesh( geometry, material );
         scene.add( cube );
     };
