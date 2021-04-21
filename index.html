@@ -28,6 +28,9 @@
             function animate() {
                 requestAnimationFrame( animate );
                 renderer.render( scene, camera );
+                
+                cube.rotation.x += 1;
+                
             }
             animate();
             
