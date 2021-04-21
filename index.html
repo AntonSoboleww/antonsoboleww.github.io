@@ -31,7 +31,7 @@
                 delta = clock.getDelta();
                 
 				requestAnimationFrame( animate );
-                addEventListener("keyup", function(event) {
+                addEventListener("keydown", function(event) {
                   if (event.keyCode == 68)
                     cube.rotation.y += angularSpeed * delta;
                 });
