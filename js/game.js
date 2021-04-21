@@ -13,14 +13,14 @@ const game = new function() {
         scene.add( cube );
     };
     
-    game.getCamera() = () => {
+    game.getCamera = () => {
         
         return camera;
     };
     
     const animate = this.animate = () => {
-        requestAnimationFrame( animate );
-        renderer.render( scene, camera );
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
     };
         
     
