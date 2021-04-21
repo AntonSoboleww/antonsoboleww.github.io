@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Главная страница</title>
+</head>
+<body>
+    <center><h1>Главная Страница доказывающая, что Володя не человек</h1></center>
+    <br/><br/>
+        <center>
+            <a id="a1"></a>
+        </center>
+    <script>
+        y = 2
+        x = GiveValue(y)
+        alert x
+    </script>
+    <script>
+        function readTextFile(file)
+        {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        var allText = rawFile.responseText;
+                        alert(allText);
+                        document.getElementById("a1").innerHTML = allText;
+                        return allText;
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+        //readTextFile("text.txt");
+        var a = 0;
+        //document.getElementById("a1").innerHTML = a;
+        
+        function Minus() {
+            //a=readTextFile("text.txt");
+            //console.log(a);
+            //a-=1;
+            //document.getElementById("a1").innerHTML = a;
+            document.getElementById("a1").innerHTML = "Владимир Маслов молодец, политик, лидер и борец";
+        }
+    </script>
+    <br/><br/>
+        <p>
+            <center>
+                <input type="button" value="Доказательства" onClick="Minus()">
+            </center>
+        </p>
+    <br/><br/>
+</body>
+</html>
