@@ -10,6 +10,9 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script>
+            var clock = new THREE.Clock();
+            var angularSpeed = THREE.Math.degToRad(20); // угловая скорость - градусов в секунду
+            
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -28,7 +31,7 @@
 				requestAnimationFrame( animate );
                 addEventListener("keyup", function(event) {
                   if (event.keyCode == 68)
-                    cube.rotation.y += 0.01;
+                    cube.rotation.y += angularSpeed * delta;
                 });
 
 				renderer.render( scene, camera );
