@@ -28,6 +28,8 @@
 			camera.position.z = 5;
 
 			const animate = function () {
+                delta = clock.getDelta();
+                
 				requestAnimationFrame( animate );
                 addEventListener("keyup", function(event) {
                   if (event.keyCode == 68)
