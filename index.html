@@ -11,7 +11,10 @@
 		<script src="js/three.js"></script>
 		<script>
             var clock = new THREE.Clock();
+            var angle = 0; // текущий угол
             var angularSpeed = THREE.Math.degToRad(20); // угловая скорость - градусов в секунду
+            var delta = 0;
+            var radius = 20;
             
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -29,8 +32,15 @@
 
 			const animate = function () {
                 delta = clock.getDelta();
+                requestAnimationFrame(animate);
+
+                camera.position.x = Math.cos(angle) * radius;
+                camera.position.z = Math.sin(angle) * radius;
                 
-				requestAnimationFrame( animate );
+                angle += angularSpeed * delta; // приращение угла
+                
+                camera.lookAt(mesh.position);
+                
                 addEventListener("keydown", function(event) {
                   if (event.keyCode == 68)
                     cube.rotation.y += angularSpeed * delta;
