@@ -11,6 +11,9 @@
 		<script type="module">
             import * as THREE from "https://deadanddiefox.github.io/js/three.module.js"; 
             import { OrbitControls } from "https://deadanddiefox.github.io/js/OrbitControls.js"; 
+            
+            var pos = 0;
+            
             var clock = new THREE.Clock();
             var angularSpeed = THREE.Math.degToRad(20);
             var delta = 0;
@@ -25,12 +28,19 @@
             var controls = new OrbitControls( camera, renderer.domElement );
             controls.maxPolarAngle = Math.PI / 2;
             
-			const geometry = new THREE.BoxGeometry();
+			const geometry = new THREE.BoxGeometry(0.3,1,0.3);
 			const material = new THREE.MeshBasicMaterial( { color: '#6495ED' } );
 			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+            
+			const geometry2 = new THREE.BoxGeometry(0.2,0.2,0.2);
+			const material2 = new THREE.MeshBasicMaterial( { color: '#f2e8c9' } );
+			const cube2 = new THREE.Mesh( geometry2, material2 );
+            
+			scene.add( cube, cube2 );
 
 			camera.position.z = 5;
+            
+            cube2.position.y = 1;
 
 			const animate = function () {
                 delta = clock.getDelta();
@@ -40,6 +50,16 @@
                   if (event.keyCode == 68)
                     cube.rotation.y += angularSpeed * delta;
                 });
+                
+                if (pos == 0 && cube2.position.y > 0.8)
+                    cube2.position.y -= 0.0035
+                else
+                    pos = 1
+                    
+                if (pos == 1 && cube2.position.y < 1.2)
+                    cube2.position.y += 0.0035
+                else
+                    pos = 0
                 
                 controls.update();
 				renderer.render( scene, camera );
