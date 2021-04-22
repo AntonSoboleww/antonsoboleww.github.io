@@ -5,11 +5,12 @@
 		<style>
 			body { margin: 0; }
 		</style>
-        <script src="js/three.js"></script>
+        </script>
 	</head>
 	<body>
 		<script type="module">
-            import { OrbitControls } from "./examples/jsm/controls/OrbitControls.js";
+            import * as THREE from "https://deadanddiefox.github.io/js/three.module.js"; 
+            import { OrbitControls } from "https://deadanddiefox.github.io/js/OrbitControls.js"; 
             var clock = new THREE.Clock();
             var angularSpeed = THREE.Math.degToRad(20);
             var delta = 0;
