@@ -8,6 +8,7 @@
         </script>
 	</head>
 	<body>
+        <a><font color="red">Я твою маму ебал</font></a>
 		<script type="module">
             import * as THREE from "https://deadanddiefox.github.io/js/three.module.js"; 
             import { OrbitControls } from "https://deadanddiefox.github.io/js/OrbitControls.js"; 
@@ -29,7 +30,7 @@
             controls.maxPolarAngle = Math.PI / 2;
             
 			const geometry = new THREE.BoxGeometry(0.3,1,0.3);
-			const material = new THREE.MeshBasicMaterial( { color: '#6495ED' } );
+			const material = new THREE.MeshBasicMaterial( { color: '#6495ed' } );
 			const cube = new THREE.Mesh( geometry, material );
             
 			const geometry2 = new THREE.BoxGeometry(0.2,0.2,0.2);
