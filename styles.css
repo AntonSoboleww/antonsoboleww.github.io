@@ -9,3 +9,19 @@
 .txt-gray {
     color: rgb(45, 45, 45);
 }
+
+.line-black {
+    color: black;
+}
+
+.text-bold-extra {
+    font-weight: 650;
+}
+
+.text-bold-normal {
+    font-weight: 600;
+}
+
+.link-thin {
+    font-weight: 300;
+}
