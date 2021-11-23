@@ -6,12 +6,9 @@
     background-color: #DCDCDC;
 }
 
-.txt-gray {
-    color: rgb(45, 45, 45);
-}
-
 .line-black {
     color: black;
+    margin: -2;
 }
 
 .text-bold-extra {
@@ -20,6 +17,18 @@
 
 .text-bold-normal {
     font-weight: 600;
+}
+
+.txt-big {
+    font-size: 18pt;
+}
+
+.txt-small {
+    font-size: 10pt;
+}
+
+.txt-gray {
+    color: rgb(45, 45, 45);
 }
 
 .link-thin {
@@ -33,8 +42,4 @@
 
 .sup-decor {
     text-decoration: none;
-}
-
-.txt-big {
-    font-size: 18pt;
 }
