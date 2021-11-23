@@ -2,6 +2,10 @@
     margin-top: 2%;
 }
 
-.bg-dark {
-    
+.bg-gray {
+    background-color: #DCDCDC;
+}
+
+.txt-gray {
+    color: rgb(45, 45, 45);
 }
