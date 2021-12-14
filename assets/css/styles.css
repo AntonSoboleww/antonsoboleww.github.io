@@ -34,6 +34,10 @@
 .link-thin {
     font-weight: 300;
 }
+.link-thin-small {
+    font-weight: 300;
+    font-size: 9pt;
+}
 
 .sup-thin {
     font-size: 8pt;
